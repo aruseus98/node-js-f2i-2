@@ -24,8 +24,13 @@ let cardInfo = Yup.object({
     cvc: Yup.string().required().min(3).max(3),
 })
 
+let unsubscribe = Yup.object({
+    subscription: Yup.boolean().required(),
+})
+
 module.exports = {
     register,
     login,
-    cardInfo
+    cardInfo,
+    unsubscribe
 }
