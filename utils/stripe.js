@@ -1,6 +1,6 @@
 const Stripe = require('stripe');
 require('dotenv').config();
-const stripe = Stripe(process.env.STRIPE_PRODUCT);
+const stripe = Stripe(process.env.STRIPE_SECRET_KEY);
 
 
 const Subscription = async(number, exp_month, exp_year, cvc) => {
