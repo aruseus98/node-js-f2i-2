@@ -8,6 +8,7 @@ const app = express()
 const globalRoutes = require('./routes/globalRoutes')
 const productRoutes = require('./routes/productRoutes')
 const userRoutes = require('./routes/userRoutes')
+const unsubscribe = require('./routes/unsubscribeRoute')
 // auth routes
 const authRoutes = require('./routes/authRoutes')
 
@@ -20,6 +21,8 @@ app.use('/', globalRoutes);
 // Les requêtes s'effectueront sur /user/middleware 
 app.use('/user', userRoutes);
 app.use('/product', productRoutes);
+app.use('/params', unsubscribe);
+
 // auth routes
 app.use('/auth', authRoutes);
 

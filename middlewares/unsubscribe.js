@@ -8,4 +8,4 @@ const unsubscribe = (schema) => async (req, res, next) => {
     }
 };
 
-module.exports = {unsubscribe} 
+module.exports = unsubscribe

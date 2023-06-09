@@ -76,7 +76,7 @@ const AuthLogin = async(req, res) => {
             })
         } 
 
-        var token = jwt.sign({ email: resultat[0].email }, process.env.JWT_SECRET_KEY);
+        var token = jwt.sign({ email: resultat[0].email, id:resultat[0].id}, process.env.JWT_SECRET_KEY);
     } catch (error) {
         return res.status(409).json({
             error: true,
