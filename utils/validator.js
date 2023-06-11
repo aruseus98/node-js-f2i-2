@@ -32,5 +32,5 @@ module.exports = {
     register,
     login,
     cardInfo,
-    unsubscribe
+    unsubscribe,
 }
